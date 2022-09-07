@@ -68,3 +68,13 @@ a {
 .swal2-styled.swal2-confirm {
     background-color: #009cc6 !important;
 }
+
+.nav__mobile .mat-button-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nav__mobile .mat-button-wrapper span {
+    flex: 2;
+}

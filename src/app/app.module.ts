@@ -11,7 +11,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SearchComponent } from './pages/search/search.component';
 import { NavComponent } from './components/nav/nav.component';
-import { DishesComponent } from './components/dishes/dishes.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,7 @@ import { DishesComponent } from './components/dishes/dishes.component';
     LoginComponent,
     SearchComponent,
     NavComponent,
-    DishesComponent
+    MenuComponent
   ],
   imports: [
     BrowserModule,

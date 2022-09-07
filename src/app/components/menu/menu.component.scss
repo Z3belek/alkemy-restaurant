@@ -1,0 +1,35 @@
+.menu__resume {
+    background-color: var(--c-blue-800);
+    padding: 40px;
+    border-radius: 10px;
+    display: flex;
+    height: 300px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.menu__average {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 0;
+}
+
+.menu__price {
+    background-color: var(--c-blue-900);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.menu__price h1 {
+    margin-bottom: 20px;
+}
+
+.menu__price p {
+    font-size: 1.5rem;
+}
+
+.menu__price hr {
+    border-color: var(--c-orange-500);
+}

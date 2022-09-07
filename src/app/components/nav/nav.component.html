@@ -1,1 +1,41 @@
-<p>nav works!</p>
+<header>
+    <div class="nav">
+        <div class="nav__left">
+            <img src="../../../assets/logo.svg" alt="">
+        </div>
+        <div class="nav__center">
+            <a mat-button routerLink="{{data.href}}" *ngFor="let data of navData">
+                <mat-icon color="primary">{{data.icon}}</mat-icon>
+                <span>{{data.label}}</span>
+            </a>
+        </div>
+        <div class="nav__right">
+            <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                <mat-icon color="primary">account_circle</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                    <mat-icon color="primary">logout</mat-icon>
+                    <span>Logout</span>
+                </button>
+            </mat-menu>
+        </div>
+        <div class="nav__mobile">
+            <button class="mobile__btnClosed" [className]="isActive ? 'mobile__btnOpened' : 'mobile__btnClosed'"
+                (click)="isActive = !isActive">
+                <div class="mobile__box">
+                    <div class="mobile__box__inner"></div>
+                </div>
+            </button>
+            <aside tabindex="-1" [className]="isActive ? 'mobile__menuOpened' : 'mobile__menuClosed'"
+                class="mobile__menuClosed">
+                <nav>
+                    <a mat-button *ngFor="let data of navData" routerLink="{{data.href}}">
+                        <mat-icon color="primary">{{data.icon}}</mat-icon>
+                        <span>{{data.label}}</span>
+                    </a>
+                </nav>
+            </aside>
+        </div>
+    </div>
+</header>

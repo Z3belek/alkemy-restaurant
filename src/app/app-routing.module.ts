@@ -9,6 +9,7 @@ import { HomeComponent } from './pages/home/home.component';
 
 import { AuthGuard } from './guards/auth.guard';
 import { LoggedGuard } from './guards/logged.guard';
+import { SearchComponent } from './pages/search/search.component';
 const routes: Routes = [
   {
     path: 'login',
@@ -18,6 +19,11 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
+    canActivate:[AuthGuard]
+  },
+  {
+    path: 'search',
+    component: SearchComponent,
     canActivate:[AuthGuard]
   },
   {

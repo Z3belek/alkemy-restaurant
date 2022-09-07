@@ -3,7 +3,6 @@
     padding: 40px;
     border-radius: 10px;
     display: flex;
-    height: 300px;
     width: 100%;
     justify-content: space-between;
 }
@@ -33,3 +32,13 @@
 .menu__price hr {
     border-color: var(--c-orange-500);
 }
+  
+@media (max-width:768px) {
+    .menu__resume {
+      flex-direction: column;
+    }
+
+    .menu__average {
+        padding: 0 0 40px 0;
+    }
+  }

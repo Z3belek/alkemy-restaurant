@@ -78,3 +78,25 @@ a {
 .nav__mobile .mat-button-wrapper span {
     flex: 2;
 }
+
+.inner {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 40px;
+}
+
+@media (min-width: 450px) {
+    .inner {
+        
+    }
+}
+
+.inner h2:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--c-orange-500);
+    margin-top: 10px;
+}

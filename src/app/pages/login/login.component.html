@@ -1,1 +1,29 @@
-<p>login works!</p>
+<div class="container">
+    <div class="loginBox">
+        <div class="loginBox__inner">
+            <div class="loginForm">
+                <h1 mat-dialog-title>Login In</h1>
+                <div mat-dialog-content>
+                    <form [formGroup]="loginForm">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Email</mat-label>
+                            <input type="email" formControlName="email" matInput>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Enter your password</mat-label>
+                            <input matInput formControlName="password" [type]="hide ? 'password' : 'text'">
+                            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                                matTooltip="Hide password" [attr.aria-pressed]="hide">
+                                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </button>
+                        </mat-form-field>
+                    </form>
+                </div>
+                <div mat-dialog-actions [align]="'end'">
+                    <button mat-raised-button color="accent" (click)="login($event)" class="full-width"
+                        [disabled]="!loginForm.valid || btnDisabled">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

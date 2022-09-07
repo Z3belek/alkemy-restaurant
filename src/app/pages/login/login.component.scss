@@ -1,0 +1,113 @@
+.container {
+    font-size: 14px;
+    line-height: 1.4286;
+    margin: 0;
+    padding: 0;
+}
+
+@media (min-width: 601px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        position: relative;
+    }
+}
+
+@media (min-width: 601px) {
+
+    .container:before,
+    .container:after {
+        box-flex: 1;
+        flex-grow: 1;
+        content: "";
+        display: block;
+        height: 24px;
+    }
+}
+
+@media (min-width: 601px) {
+    .container:before {
+        min-height: 30px;
+    }
+}
+
+@media (min-width: 601px) {
+    .container:after {
+        min-height: 24px;
+    }
+}
+
+@media (min-width: 601px) {
+    .container:after {
+        min-height: 63.9999996px;
+    }
+}
+
+.loginBox {
+    background: var(--c-blue-700);
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    position: relative;
+    z-index: 2;
+    min-height: 100vh;
+}
+
+@media (min-width: 601px) {
+    .loginBox {
+        background: var(--c-blue-700);
+        border: 1px solid var(--c-blue-400);
+        border-radius: 8px;
+        display: block;
+        flex-shrink: 0;
+        margin: 0 auto;
+        min-height: 0;
+        width: 450px;
+        transition: .2s;
+    }
+}
+
+.loginBox__inner {
+    box-flex: 1;
+    flex-grow: 1;
+    overflow: hidden;
+    padding: 24px 24px 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media (min-width: 450px) {
+    .loginBox__inner {
+        padding: 48px 40px 36px;
+    }
+}
+
+@media (min-width: 601px) {
+    .loginBox__inner {
+        height: auto;
+        min-height: 500px;
+        overflow-y: auto;
+    }
+}
+
+.loginForm {
+    margin: auto -24px;
+    padding-left: 24px;
+    padding-right: 24px;
+    overflow: hidden;
+}
+
+@media (min-width: 450px) {
+    .loginForm {
+        margin: auto -40px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+.loginForm h1 {
+    margin-bottom: 15px;
+    text-align: center;
+}

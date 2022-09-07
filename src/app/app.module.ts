@@ -10,13 +10,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SearchComponent } from './pages/search/search.component';
+import { NavComponent } from './components/nav/nav.component';
+import { DishesComponent } from './components/dishes/dishes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
-    SearchComponent
+    SearchComponent,
+    NavComponent,
+    DishesComponent
   ],
   imports: [
     BrowserModule,

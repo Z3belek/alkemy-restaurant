@@ -1,7 +1,5 @@
-import { HttpErrorResponse } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
-import { ApiService, Dish } from 'src/app/services/api.service';
-import { MenuService } from 'src/app/services/menu.service';
+import { Dish } from 'src/app/services/api.service';
 import { MenuComponent } from '../menu/menu.component';
 
 @Component({
@@ -19,7 +17,7 @@ export class DishComponent implements OnInit {
   @Input() i: number = 0;
   @Input() type: string = "";
   @Input() dish: any;
-  
+
   showDetails: { [key: number]: boolean } = {};
   constructor(
     private menuComponent: MenuComponent

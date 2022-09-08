@@ -6,7 +6,7 @@
     </button>
 </mat-form-field>
 <div class="inner__results">
-    <mat-card class="card__inner" *ngFor="let dish of searchResult; index as i;">
+    <!-- <mat-card class="card__inner" *ngFor="let dish of searchResult; index as i;">
         <mat-card-header>
             <div mat-card-avatar class="card__icon"></div>
             <mat-card-title>{{dish.title}}</mat-card-title>
@@ -27,7 +27,18 @@
             <button mat-button style="background: var(--c-orange-500)" (click)="seeDetails(i)">See Details</button>
             <button mat-button style="background: #009cc6" (click)="addToMenu(dish.id)">Add to menu</button>
         </mat-card-actions>
-    </mat-card>
+    </mat-card> -->
+    <app-dish
+        *ngFor="let dish of searchResult; index as i;"
+        [title]="dish.title"
+        [readyInMinutes]="dish.readyInMinutes"
+        [image]="dish.image"
+        [healthScore]="dish.healthScore"
+        [vegan]="dish.vegan"
+        [pricePerServing]="dish.pricePerServing"
+        [id]="dish.id"
+        [type]="'add'"
+        ></app-dish>
     <div *ngIf="searchResult.length==0 && searching">
         <h3>No results...</h3>
     </div>

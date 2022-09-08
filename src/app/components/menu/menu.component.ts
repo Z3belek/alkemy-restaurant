@@ -54,15 +54,11 @@ export class MenuComponent implements OnInit {
       text: 'You delete this dish from your menu!',
       icon: 'warning',
       showCancelButton: true,
-      showDenyButton: true,
       confirmButtonText: `Delete`,
-      denyButtonText: `Don't delete`,
     }).then((result) => {
       if(result.isConfirmed) {
         this.menuService.deleteDish(dish.id);
         Swal.fire('Deleted!', '', 'success')
-      } else if (result.isDenied) {
-        Swal.fire('Changes are not saved', '', 'info')
       }
     })
   }

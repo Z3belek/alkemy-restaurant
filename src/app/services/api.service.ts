@@ -6,7 +6,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ApiService {
-  apiKey = 'cf85651e1dd646379bc43dbc9a058352';
+  apiKey = '6d303f20b28b4e04aa6045c019c1aecc';
   urlBase = 'https://api.spoonacular.com/recipes/';
 
   constructor(

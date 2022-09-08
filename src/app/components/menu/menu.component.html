@@ -16,7 +16,7 @@
         </div>
     </div>
     <div class="inner__menu">
-        <mat-card class="card__inner" *ngFor="let dish of dishMenu; index as i;">
+        <!-- <mat-card class="card__inner" *ngFor="let dish of dishMenu; index as i;">
             <mat-card-header>
                 <div mat-card-avatar class="card__icon"></div>
                 <mat-card-title>{{dish.title}}</mat-card-title>
@@ -37,6 +37,15 @@
                 <button mat-button style="background: var(--c-orange-500)" (click)="seeDetails(i)">See Details</button>
                 <button mat-button style="background: #c60000" (click)="deleteDish(dish)">Delete from menu</button>
             </mat-card-actions>
-        </mat-card>
+        </mat-card> -->
+        <app-dish
+        *ngFor="let dish of dishMenu; index as i;"
+        [title]="dish.title"
+        [readyInMinutes]="dish.readyInMinutes"
+        [image]="dish.image"
+        [healthScore]="dish.healthScore"
+        [vegan]="dish.vegan"
+        [pricePerServing]="dish.pricePerServing"
+        ></app-dish>
     </div>
 </div>

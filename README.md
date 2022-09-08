@@ -1,27 +1,50 @@
-# AlkemyRestaurant
+<h1 align="center">Welcome to Alkemy Restaurant 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-v3.0-blue.svg?cacheSeconds=2592000" />
+  <a href="https://github.com/Z3belek/Portfolio-AP-FrontEnd/blob/main/LICENSE" target="_blank">
+    <img alt="License: GPL--3.0 license" src="https://img.shields.io/badge/License-GPL--3.0 license-yellow.svg" />
+  </a>
+</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.1.
+> This is a project for the Alkemy Challenge. It is a restaurant website where you can search for dishes and make your menu.
 
-## Development server
+### 🏠 [Homepage](https://github.com/Z3belek/alkemy-restaurant)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Install
 
-## Code scaffolding
+```sh
+npm install
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Usage
 
-## Build
+```sh
+ng serve --open
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Run tests
 
-## Running unit tests
+```sh
+ng test
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Author
 
-## Running end-to-end tests
+👤 **Sebastián Ibañez**
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+* Website: https://www.linkedin.com/in/sebastian-ibanez/
+* Github: [@Z3belek](https://github.com/Z3belek)
+* LinkedIn: [@sebastian-ibanez](https://linkedin.com/in/sebastian-ibanez)
 
-## Further help
+## 🤝 Contributing
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/Z3belek/alkemy-restaurant/issues). 
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+## 📝 License
+
+Copyright © 2022 [Sebastián Ibañez](https://github.com/Z3belek).<br />
+This project is [GPL--3.0 license](https://github.com/Z3belek/alkemy-restaurant/blob/main/LICENSE) licensed.

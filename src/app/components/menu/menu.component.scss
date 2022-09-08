@@ -80,13 +80,13 @@
         justify-content: space-between;
     }
 
-    .inner__menu .card__inner:last-child {
-        grid-column-start: span 3;
-      }
+    // .inner__menu .card__inner:last-child {
+    //     grid-column-start: span 3;
+    //   }
 }
 
 .card__icon {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-image: url('https://i.imgur.com/hklQRbZ.png');
     background-size: cover;
 }
 

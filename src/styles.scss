@@ -86,12 +86,6 @@ a {
     padding: 20px 40px;
 }
 
-@media (min-width: 450px) {
-    .inner {
-        
-    }
-}
-
 .inner h2:after {
     content: '';
     display: block;
@@ -99,4 +93,8 @@ a {
     height: 2px;
     background-color: var(--c-orange-500);
     margin-top: 10px;
+}
+
+.mat-card {
+    position: static !important;
 }

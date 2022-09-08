@@ -28,7 +28,7 @@ export class MenuComponent implements OnInit {
 
   mathsAll(): void {
     this.totalPrice = this.menuService.totalPrice().toFixed(2);
-    this.totalTime = this.matHealth().toFixed(2);
+    this.totalTime = this.matTime().toFixed(2);
     this.totalHealth = this.matHealth().toFixed(2);
   }
 

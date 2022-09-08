@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
-      email: ['' , [Validators.required, Validators.email]],
+      email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(4)]]
     });
   }
@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
   login(event: Event) {
     event.preventDefault;
     this.btnDisabled = true;
-    if(this.loginForm.valid) {
+    if (this.loginForm.valid) {
       this.authService.login(this.loginForm.value).subscribe({
         next: (res) => {
           setTimeout(() => {

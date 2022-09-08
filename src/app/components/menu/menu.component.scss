@@ -32,13 +32,13 @@
 .menu__price hr {
     border-color: var(--c-orange-500);
 }
-  
+
 @media (max-width:768px) {
     .menu__resume {
-      flex-direction: column;
+        flex-direction: column;
     }
 
     .menu__average {
         padding: 0 0 40px 0;
     }
-  }
+}

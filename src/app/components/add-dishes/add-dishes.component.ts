@@ -72,7 +72,7 @@ export class AddDishesComponent implements OnInit {
         this.dashDetails.healthScore = data.healthScore;
         this.menuService.menuCheck(id);
       },
-      error:(error:HttpErrorResponse)=>{
+      error: (error: HttpErrorResponse) => {
         console.log(error.message);
       }
     })

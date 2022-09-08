@@ -138,6 +138,12 @@ export class MenuService {
     }
   }
 
+  deleteDish(id: number): void {
+    this.dishMenu = this.dishMenu.filter((dish) => {
+      return dish.id !== id;
+    })
+    this.updateMenu(this.dishMenu);
+  }
   totalTime(): number {
     let time = 0;
     this.dishMenu.forEach((dish) => {

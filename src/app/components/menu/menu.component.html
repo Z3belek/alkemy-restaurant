@@ -1,16 +1,42 @@
-<div class="menu__resume">
-    <div class="menu__average">
-        <div class="menu__healt">
-            <h1>menu healt average: {{totalHealth}}</h1>
+<div class="inner__home">
+    <div class="menu__resume">
+        <div class="menu__average">
+            <div class="menu__healt">
+                <h1>Health menu average: {{totalHealth}}</h1>
+            </div>
+            <div class="menu__time">
+                <h1>Prepare time average: {{totalTime}} minutes</h1>
+            </div>
         </div>
-        <div class="menu__time">
-            <h1>menu prepare average: {{totalTime}} minutes</h1>
+        <div class="menu__price">
+            <h1>Total price</h1>
+            <p *ngFor="let dish of dishMenu">{{dish.pricePerServing}}</p>
+            <hr>
+            <p>{{totalPrice}}</p>
         </div>
     </div>
-    <div class="menu__price">
-        <h1>Total price</h1>
-        <p *ngFor="let dish of dishMenu">{{dish.pricePerServing}}</p>
-        <hr>
-        <p>{{totalPrice}}</p>
+    <div class="inner__menu">
+        <mat-card class="card__inner" *ngFor="let dish of dishMenu; index as i;">
+            <mat-card-header>
+                <div mat-card-avatar class="card__icon"></div>
+                <mat-card-title>{{dish.title}}</mat-card-title>
+                <mat-card-subtitle>Ready in {{dish.readyInMinutes}} minutes</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image [src]="dish.image">
+            <mat-card-content *ngIf="showDetails[i]">
+                <div class="card__info">
+                    <div class="healt__time">
+                        <h4>Health score: <span>{{dish.healthScore}}</span></h4>
+                        <h4 *ngIf="dish.vegan" style="color:#00a700;" class="py-1">Vegan dish</h4>
+                        <h4 *ngIf="!dish.vegan" style="color: var(--c-orange-500)" class="py-1">Not vegan dish</h4>
+                    </div>
+                    <h3>Price: ${{dish.pricePerServing}}</h3>
+                </div>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-button style="background: var(--c-orange-500)" (click)="seeDetails(i)">See Details</button>
+                <button mat-button style="background: #c60000" (click)="deleteDish(dish)">Delete from menu</button>
+            </mat-card-actions>
+        </mat-card>
     </div>
 </div>

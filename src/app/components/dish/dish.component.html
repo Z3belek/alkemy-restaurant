@@ -18,10 +18,10 @@
     <mat-card-actions>
         <button mat-button style="background: var(--c-orange-500)" (click)="seeDetails(i)">See Details</button>
         <div *ngIf="type !== 'add'; else add_buttons">
-            <button mat-button style="background: #c60000" (click)="deleteDish(dish)">Delete from menu</button>
+            <button mat-button style="background: #c60000" (click)="deleteDishFromMenu(dish)">Delete from menu</button>
         </div>
         <ng-template #add_buttons>
-            <button mat-button style="background: #009cc6">Add to menu</button>
+            <button mat-button style="background: #009cc6" (click)="addDishToMenu(dish)">Add to menu</button>
         </ng-template>
         
     </mat-card-actions>

@@ -36,8 +36,9 @@
         [healthScore]="dish.healthScore"
         [vegan]="dish.vegan"
         [pricePerServing]="dish.pricePerServing"
-        [id]="dish.id"
         [type]="'add'"
+        [id]="dish.id"
+        (addDish)="addToMenu(dish.id)"
         ></app-dish>
     <div *ngIf="searchResult.length==0 && searching">
         <h3>No results...</h3>

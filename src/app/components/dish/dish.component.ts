@@ -1,6 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { SearchComponent } from 'src/app/pages/search/search.component';
 import { Dish } from 'src/app/services/api.service';
-import { MenuComponent } from '../menu/menu.component';
 
 @Component({
   selector: 'app-dish',
@@ -17,10 +17,12 @@ export class DishComponent implements OnInit {
   @Input() i: number = 0;
   @Input() type: string = "";
   @Input() dish: any;
-
+  @Input() id: number = 0;
+  @Output() deleteDish: EventEmitter<any> = new EventEmitter<any>();
+  @Output() addDish: EventEmitter<any> = new EventEmitter<any>();
+  
   showDetails: { [key: number]: boolean } = {};
   constructor(
-    private menuComponent: MenuComponent
   ) { }
 
   ngOnInit(): void {
@@ -30,7 +32,11 @@ export class DishComponent implements OnInit {
     this.showDetails[index] = !this.showDetails[index];
   }
 
-  deleteDish(dish: Dish): void {
-    this.menuComponent.deleteDish(dish);
+  deleteDishFromMenu(dish: any) {
+    this.deleteDish.emit(dish);
+  }
+
+  addDishToMenu(dish: any) {
+    this.addDish.emit(dish);
   }
 }
